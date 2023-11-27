@@ -571,7 +571,7 @@ tier:
           value: MY_ENV_VALUE
 ```
 
-Example 'envFrom:
+Example 'envFrom' block:
 
 ```yaml
 tier:
