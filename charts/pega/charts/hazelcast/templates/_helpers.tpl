@@ -29,6 +29,22 @@
  {{- end -}}
 {{- end }}
 
+{{- define "isEncryptionEnabled" }}
+  {{- if .Values.encryption.enabled  -}}
+   true
+  {{- else -}}
+   false
+  {{- end -}}
+{{- end -}}
+
+{{- define "isFipsEnabled" }}
+  {{- if and ( .Values.encryption.enabled ) ( .Values.encryption.fipsEnabled) -}}
+   true
+  {{- else -}}
+   false
+  {{- end -}}
+{{- end -}}
+
 {{- define "hazelcastVolumeCredentials" }}hazelcast-volume-credentials{{- end }}
 
 {{- define "hazelcastVolumeTemplate" }}
